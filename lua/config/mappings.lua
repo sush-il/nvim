@@ -1,3 +1,7 @@
+-- ### This file only contains core mappings ### --
+-- ### For plugin mappings check the file with the plugin name ### --
+-- ### Some cases instead of plugin configs are grouped, e.g. 'theming' ### --
+
 local map = vim.keymap.set
 
 -- GENERAL
@@ -38,8 +42,3 @@ map("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
 map("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 map("n", "<C-j>", "<C-w>j", { desc = "Move to window below" })
 map("n", "<C-k>", "<C-w>k", { desc = "Move to window above" })
-
--- #################### PLUGINS ################################ --
-
--- NVIM TREE
-map('n', '<C-n>', ':NvimTreeToggle<CR>', { silent = true, noremap = true })

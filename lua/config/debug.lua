@@ -28,13 +28,15 @@ dapconfig.jsconfig = {
 }
 
 dapconfig.keymappings = function()
-    -- DAP (Debugging)
-    map("n", "<Leader>dc", function() dap.continue() end, { desc = "Start/Continue Debugging" })
-    map("n", "<F10>", function() dap.step_over() end, { desc = "Step Over" })
-    map("n", "<F11>", function() dap.step_into() end, { desc = "Step Into" })
-    map("n", "<F12>", function() dap.step_out() end, { desc = "Step Out" })
-    map("n", "<Leader>db", function() dap.toggle_breakpoint() end, { desc = "Toggle Breakpoint" })
-    map("n", "<Leader>dr", function() dap.repl.open() end, { desc = "Open DAP REPL" })
+    map('n', '<leader>db', '<cmd>lua require("dap").toggle_breakpoint()<CR>', { desc = "DAP: Toggle Breakpoint" })
+    map('n', '<leader>dc', '<cmd>lua require("dap").continue()<CR>', { desc = "DAP: Continue" })
+    map('n', '<leader>ds', '<cmd>lua require("dap").step_over()<CR>', { desc = "DAP: Step Over" })
+    map('n', '<leader>di', '<cmd>lua require("dap").step_into()<CR>', { desc = "DAP: Step Into" })
+    map('n', '<leader>do', '<cmd>lua require("dap").step_out()<CR>', { desc = "DAP: Step Out" })
+    map('n', '<leader>dr', '<cmd>lua require("dap").repl.toggle()<CR>', { desc = "DAP: Toggle REPL" })
+    map('n', '<leader>dt', '<cmd>lua require("dap").terminate()<CR>', { desc = "DAP: Terminate Debugger" })
+    map('n', '<leader>dl', '<cmd>lua require("dap").list_breakpoints()<CR>', { desc = "DAP: List Breakpoints" })
+    map('n', '<leader>dP', '<cmd>lua require("dap").pause()<CR>', { desc = "DAP: Pause" })
 end
 
 return dapconfig 

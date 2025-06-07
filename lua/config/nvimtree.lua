@@ -1,4 +1,11 @@
-return {
+local mappings = {
+  { "<C-n>", function() vim.cmd("NvimTreeToggle") end, desc = "Toggle NvimTree" },
+  { "<leader>nt", function() vim.cmd("NvimTreeToggle") end, desc = "Toggle NvimTree" },
+  { "<leader>nf", function() vim.cmd("NvimTreeFindFile") end, desc = "Find current file in NvimTree" },
+  { "<leader>nr", function() vim.cmd("NvimTreeRefresh") end, desc = "Refresh NvimTree" },
+}
+
+local options = {
   -- Filters out dotfiles (like .git, .env)
   filters = {
     dotfiles = true,
@@ -18,15 +25,15 @@ return {
   },
 
   view = {
-    width = 30, 
+    width = 30,
     preserve_window_proportions = true, -- keeps splits from resizing weirdly
   },
 
   renderer = {
-    root_folder_label = false, 
+    root_folder_label = false,
     highlight_git = true, -- enable git status colors
     indent_markers = {
-      enable = true, 
+      enable = true,
     },
     icons = {
       glyphs = {
@@ -39,9 +46,21 @@ return {
           symlink = "",
         },
         git = {
-          unmerged = "", 
+          unmerged = "",
         },
       },
     },
   },
+  -- NvimTree also has an internal 'key_bindings' option,
+  -- but these are for actions *inside* the NvimTree window.
+  -- For global toggles, the lazy.nvim 'keys' approach is better.
+  -- Example of an internal key_binding (not used here for your global maps):
+  -- key_bindings = {
+  --   { key = "v", action = "vsplit" },
+  -- }
+}
+
+return {
+  keys = mappings,
+  opts = options
 }

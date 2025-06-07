@@ -1,3 +1,5 @@
+local config = require('config.neogit')
+
 return {
   "NeogitOrg/neogit",
   dependencies = {
@@ -5,4 +7,6 @@ return {
     "sindrets/diffview.nvim",       
     "nvim-telescope/telescope.nvim", 
   },
+
+  keys = config.keys
 }
