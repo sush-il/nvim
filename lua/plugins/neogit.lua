@@ -8,5 +8,8 @@ return {
     "nvim-telescope/telescope.nvim", 
   },
 
-  keys = config.keys
+  keys = config.keys,
+  config = function()
+    require('neogit').setup(config.opts);
+  end
 }

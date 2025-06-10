@@ -9,12 +9,9 @@ local mappings = {
 }
 
 local opts = {
-  -- Example:
-  -- signs = {
-  --   add = { text = "▎" },
-  --   change = { text = "▎" },
-  --   delete = { text = "" },
-  -- },
+  commit_editor = {
+    kind = "floating"
+  },
 }
 
 return {
