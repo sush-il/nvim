@@ -37,9 +37,9 @@ opt.numberwidth = 2
 opt.ruler = false
 
 -- Backup and Undo
-opt.swapfile = true         
-opt.backup = false         
-opt.undofile = true     
+opt.swapfile = true
+opt.backup = false
+opt.undofile = true
 
 -- Search
 opt.incsearch = true           -- Show matches while typing
@@ -48,15 +48,22 @@ opt.smartcase = true           -- ...unless uppercase is used
 vim.inccommand = "split"       -- Live preview for :substitute
 
 -- Split behavior
-opt.splitright = true         
-opt.splitbelow = true        
+opt.splitright = true
+opt.splitbelow = true
 
 -- Miscellaneous
 opt.backspace = { "start", "eol", "indent" }  -- Allow full backspace
 opt.isfname:append("@-@")                     -- Allow @ in filenames
-opt.updatetime = 50           
+opt.updatetime = 100 
 opt.clipboard = "unnamedplus"                -- Sync with system clipboard
 opt.fileformats = { "unix", "mac", "dos" } 
 
 -- EditorConfig support
 g.editorconfig = true
+
+-- Code folding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldcolumn = "0"
+vim.opt.foldlevel = 99
+vim.opt.foldtext = "" 
