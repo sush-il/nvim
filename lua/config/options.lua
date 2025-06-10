@@ -1,5 +1,9 @@
-local opt = vim.opt     
-local g = vim.g        
+local opt = vim.opt
+local g = vim.g 
+
+-- Set leader key to space
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
 -- Disable netrw banner (file explorer)
 g.netrw_banner = 0

@@ -8,10 +8,13 @@ local mappings = {
 local options = {
   -- Filters out dotfiles (like .git, .env)
   filters = {
-    dotfiles = true,
+    dotfiles = false,
+    git_ignored = false
   },
 
-  git = { enable = true },
+  git = { 
+    enable = true,
+  },
 
   -- Keeps the cursor at the file you opened instead of at the top
   hijack_cursor = true,

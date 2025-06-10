@@ -12,7 +12,7 @@ return {
       local dapvt = require("nvim-dap-virtual-text")
 
       -- Setup dap-ui and virtual text
-      dapui.setup()
+      dapui.setup(require('config.dapui'))
       dapvt.setup()
 
       -- Automatically open/close UI

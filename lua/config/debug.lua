@@ -1,6 +1,5 @@
 local dapconfig = {}
 local map = vim.keymap.set
-local dap = require('dap')
 
 dapconfig.jsadapter = {
   type = "server",
