@@ -1,4 +1,4 @@
-# 🧠 Practical Vim + Neovim Cheat Sheet (Essential Shortcuts)
+# 🧠 Practical Vim + Neovim Keymap Cheat Sheet
 ---
 ## 🧭 Movement
 
