@@ -23,6 +23,7 @@ dapconfig.jsconfig = {
     cwd = "${workspaceFolder}",
     runtimeExecutable = "node",
     console = "integratedTerminal",
+    runtimeArgs = { "--inspect-brk" }
   },
 }
 
@@ -38,4 +39,4 @@ dapconfig.keymappings = function()
     map('n', '<leader>dP', '<cmd>lua require("dap").pause()<CR>', { desc = "DAP: Pause" })
 end
 
-return dapconfig 
+return dapconfig
