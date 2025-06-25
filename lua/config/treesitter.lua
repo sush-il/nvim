@@ -1,5 +1,5 @@
 return {
-  ensure_installed = { "lua", "luadoc", "printf", "vim", "vimdoc" },
+  ensure_installed = { "javascript", "json", "lua", "luadoc", "printf", "vim", "vimdoc" },
 
   highlight = {
     enable = true,

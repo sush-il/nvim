@@ -5,6 +5,9 @@ local mappings = {
     { "<leader>fh", function() require("telescope.builtin").help_tags() end, desc = "Help tags" },
 }
 
+local config = {}
+
 return {
-    keys = mappings
+    keys = mappings,
+    config = config
 }
