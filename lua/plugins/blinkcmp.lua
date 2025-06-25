@@ -9,7 +9,7 @@ return {
       nerd_font_variant = 'mono'
     },
 
-    completion = { 
+    completion = {
         documentation = { auto_show = false }
     },
 
