@@ -27,7 +27,34 @@ dapconfig.jsconfig = {
   },
 }
 
+-- Adapter for Go using delve
+dapconfig.goadapter  = {
+  type = "server",
+  port = "${port}",
+  executable = {
+    command = "dlv",
+    args = { "dap", "-l", "127.0.0.1:${port}" },
+  },
+}
+
+-- Configurations for Go
+dapconfig.goconfig = {
+  {
+    type = "go",
+    name = "Debug File",
+    request = "launch",
+    program = "${file}",
+  },
+  {
+    type = "go",
+    name = "Debug Package",
+    request = "launch",
+    program = "${fileDirname}",
+  }
+}
+
 dapconfig.keymappings = function()
+    map("n", "<leader>du", '<cmd>lua require("dapui").toggle()<CR>', { desc = "DAP UI Toggle" })
     map('n', '<leader>db', '<cmd>lua require("dap").toggle_breakpoint()<CR>', { desc = "DAP: Toggle Breakpoint" })
     map('n', '<leader>dc', '<cmd>lua require("dap").continue()<CR>', { desc = "DAP: Continue" })
     map('n', '<leader>ds', '<cmd>lua require("dap").step_over()<CR>', { desc = "DAP: Step Over" })
