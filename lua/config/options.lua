@@ -22,13 +22,13 @@ opt.colorcolumn = ""           -- Vertical line at column 80 ("" disables)
 opt.mouse = "a"                -- Enable mouse in all modes
 
 -- Indentation and Tabs
-opt.tabstop = 4               
-opt.softtabstop = 4          
-opt.shiftwidth = 4          
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
 opt.expandtab = true           -- Convert tabs to spaces
-opt.autoindent = true      
-opt.smartindent = true    
-opt.wrap = false         
+opt.autoindent = true
+opt.smartindent = true
+opt.wrap = false
 opt.whichwrap:append "<>[]hl"  -- Go to previous/next line when EOL reached
 
 -- Numbers
