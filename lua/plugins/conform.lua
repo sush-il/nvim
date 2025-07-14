@@ -6,18 +6,18 @@ local config = {
         lsp_fallback = true,
     },
 
-    formatters_by_ft = {
-        -- lua = { "stylua" },
-        javascript = { "eslint_d" },
-        typescript = { "prettier" },
-        typescriptreact = { "prettier" },
-        json = { "eslint_d" },
-        css = { "prettier" },
-        html = { "prettier" },
-        python = { "black" },
-        go = { "gofmt" },
-        sh = { "shfmt" },
-    }
+    -- formatters_by_ft = {
+    --     javascript = { "eslint_d" },
+    --     typescript = { "prettier" },
+    --     typescriptreact = { "prettier" },
+    --     css = { "prettier" },
+    --     html = { "prettier" },
+    --     python = { "black" },
+    --     go = { "gofmt" },
+    --     sh = { "shfmt" },
+    --     lua = { "stylua" },
+    --     json = { "prettier" },
+    -- }
 }
 
 return {
@@ -27,3 +27,5 @@ return {
         require("conform").setup(config)
     end,
 }
+
+-- return {}

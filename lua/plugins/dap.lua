@@ -76,9 +76,6 @@ return {
 
             -- Go configurations
             dap.configurations.go = require('config.debug').goconfig
-
-            -- Set keymappings
-            keymappings()
         end,
     }
 }
