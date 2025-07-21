@@ -3,21 +3,21 @@ local config = {
         timeout_ms = 3000,
         async = false,
         quiet = false,
-        lsp_fallback = true,
+        lsp_fallback = false,
     },
 
-    -- formatters_by_ft = {
-    --     javascript = { "eslint_d" },
-    --     typescript = { "prettier" },
-    --     typescriptreact = { "prettier" },
-    --     css = { "prettier" },
-    --     html = { "prettier" },
-    --     python = { "black" },
-    --     go = { "gofmt" },
-    --     sh = { "shfmt" },
-    --     lua = { "stylua" },
-    --     json = { "prettier" },
-    -- }
+    formatters_by_ft = {
+        javascript = { "prettier" },
+        typescript = { "prettier" },
+        typescriptreact = { "prettier" },
+        css = { "prettier" },
+        html = { "prettier" },
+        python = { "black" },
+        go = { "gofmt" },
+        sh = { "shfmt" },
+        lua = { "stylua" },
+        json = {}, -- "prettier"
+    }
 }
 
 return {
@@ -27,5 +27,3 @@ return {
         require("conform").setup(config)
     end,
 }
-
--- return {}
