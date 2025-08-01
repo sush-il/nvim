@@ -18,7 +18,7 @@ local dapuiconfig = {
             size = 10,
             position = "bottom",
         },
-    }
+    },
 }
 
 local keymappings = function()
@@ -55,7 +55,6 @@ return {
             dapvt.setup()
 
             -- Automatically open/close UI
-            -- dap.listeners.after.event_initialized["dapui_config"] = function() dapui.open() end
             dap.listeners.after.event_initialized["dapui_config"] = function()
                 vim.schedule(function()
                     dapui.open()
