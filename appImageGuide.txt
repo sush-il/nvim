@@ -1,0 +1,17 @@
+Full instructions available on 
+https://github.com/neovim/neovim/blob/master/INSTALL.md#install-from-package
+
+# Get the app image and give permissions
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+chmod u+x nvim-linux-x86_64.appimage
+
+# extract it
+./nvim.appimage --appimage-extract
+
+# Move extracted folder to /opt
+sudo rm -rf /opt/nvim
+sudo mv squashfs-root /opt/nvim
+
+# Create a new symlink
+sudo ln -sf /opt/nvim/AppRun /usr/local/bin/nvim
+
